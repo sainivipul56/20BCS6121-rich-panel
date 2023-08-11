@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RichPanel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/syles.css">
+  </head>
+  <body>
+    <script>
+        const togglerHandler = () => {
+            const leftLight = document.getElementById("highlighterLeft");
+            const rightLight = document.getElementById("highlighterRight");
+
+            const monthLabel = document.getElementById("monthLabel");
+            const yearLabel = document.getElementById("yearLabel");
+
+            monthLabel.classList.toggle("text-white");
+            yearLabel.classList.toggle("text-white");
+
+            leftLight.classList.toggle("highlighterLeft");
+            rightLight.classList.toggle("highlighterRight");
+        }
+    </script>
+
+    <div class="col-12 d-flex justify-content-center align-items-center bg">
+      <div>
+        <h2 class="mb-4 text-center">
+          Choose the right PlanHandler for you
+        </h2>
+        <table class="table table col-12">
+          <thead>
+            <tr style="border-style: none">
+              <td class="" style="border-style: none">
+                <div class="switch_wrapper" onclick="togglerHandler()">
+                  <input id="monthly" type="radio" name="monthly" />
+                  <input id="yearly" type="radio" name="yearly" />
+                  <label id="monthLabel" htmlFor="monthly"> Monthly </label>
+                  <label id="yearLabel" htmlFor="yearly" class="text-white"> Yearly </label>
+                  <span id="highlighterLeft" class="highlighterLeft"></span>
+                  <span id="highlighterRight" class=""></span>
+                </div>
+              </td>
+              <td class="relative">
+                <div class="tbHead tbHeadSelected">Mobile</div>
+              </td>
+              <td class="relative" style="border-style: none">
+                <div class="tbHead">Basic</div>
+              </td>
+              <td class="relative" style="border-style: none">
+                <div class="tbHead">Standard</div>
+              </td>
+              <td class="relative" style="border-style: none">
+                <div class="tbHead">Premium</div>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Monthly price</th>
+              <td class="text-center tbBodySelected">₹ 100</td>
+              <td class="text-center tbBodySelected">₹ 200</td>
+              <td class="text-center tbBodySelected">₹ 500</td>
+              <td class="text-center tbBodySelected">₹ 700</td>
+            </tr>
+            <tr>
+              <th>Video quality</th>
+              <td class="text-center tbBodySelected">Good</td>
+              <td class="text-center tbBodySelected">Good</td>
+              <td class="text-center tbBodySelected">Better</td>
+              <td class="text-center tbBodySelected">Best</td>
+            </tr>
+            <tr>
+              <th>Resolution</th>
+              <td class="text-center tbBodySelected">480p</td>
+              <td class="text-center tbBodySelected">480p</td>
+              <td class="text-center tbBodySelected">1080p</td>
+              <td class="text-center tbBodySelected">4K+HDR</td>
+            </tr>
+            <tr style="border-style: none">
+              <th style="border-style: none">Decices you can use to watch</th>
+              <td
+                class="text-center tbBodySelected"
+                style="border-style: none; font-size: 12px"
+              >
+                Phone
+              </td>
+              <td
+                class="text-center tbBodySelected"
+                style="border-style: none; font-size: 12px"
+              >
+                Phone
+              </td>
+              <td
+                class="text-center tbBodySelected"
+                style="border-style: none; font-size: 12px"
+              >
+                Phone
+              </td>
+              <td
+                class="text-center tbBodySelected"
+                style="border-style: none; font-size: 12px"
+              >
+                Phone
+              </td>
+            </tr>
+            <tr style="border-style: none; font-size: 12px">
+              <th style="border-style: none"></th>
+              <td class="text-center tbBodySelected" style="border-style: none">
+                Tablet
+              </td>
+              <td class="text-center tbBodySelected" style="border-style: none">
+                Tablet
+              </td>
+              <td class="text-center tbBodySelected" style="border-style: none">
+                Tablet
+              </td>
+              <td class="text-center tbBodySelected" style="border-style: none">
+                Tablet
+              </td>
+            </tr>
+            <tr style="border-style: none; font-size: 12px">
+              <th style="border-style: none"></th>
+              <td
+                class="text-center tbBodySelected"
+                style="border-style: none"
+              ></td>
+              <td class="text-center tbBodySelected" style="border-style: none">
+                Computer
+              </td>
+              <td class="text-center tbBodySelected" style="border-style: none">
+                Computer
+              </td>
+              <td class="text-center tbBodySelected" style="border-style: none">
+                Computer
+              </td>
+            </tr>
+            <tr style="border-style: none; font-size: 12px">
+              <th style="border-style: none"></th>
+              <td
+                class="text-center tbBodySelected"
+                style="border-style: none"
+              ></td>
+              <td class="text-center tbBodySelected" style="border-style: none">
+                TV
+              </td>
+              <td class="text-center tbBodySelected" style="border-style: none">
+                TV
+              </td>
+              <td class="text-center tbBodySelected" style="border-style: none">
+                TV
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <div class="d-flex justify-content-center mt-5">
+            <button
+              class="btn btn-primary btn col-4"
+              style="background: #1f4d91"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
